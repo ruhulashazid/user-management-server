@@ -14,6 +14,10 @@ app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the User Management API');
+})
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
